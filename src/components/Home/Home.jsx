@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Home.scss";
 
@@ -17,7 +18,13 @@ const Home = ({ banner }) => (
       </div>
       <img src={banner1} alt="imagen" />
     </div>*/}
-    {banner ? <img src={banner} alt="imagen" /> : <p>Cargando imagen</p>}
+    {banner ? (
+      <Link to="/catalogo">
+        <img src={banner} alt="imagen" />
+      </Link>
+    ) : (
+      <p>Cargando imagen</p>
+    )}
   </div>
 );
 
