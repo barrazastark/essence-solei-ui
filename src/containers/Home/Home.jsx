@@ -5,7 +5,7 @@ import { Home as HomePage } from "components";
 const Home = () => {
   const [banner, setBanner] = useState(null);
 
-  import("../../images/bannerv6.png").then((img) => {
+  import("../../images/bannerv7.png").then((img) => {
     setBanner(img.default);
   });
 
