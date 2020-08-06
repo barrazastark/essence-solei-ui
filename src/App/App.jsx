@@ -17,14 +17,12 @@ const Login = lazy(() => import("../containers/Login"));
 const Main = lazy(() => import("../containers/Main"));
 const Home = lazy(() => import("../containers/Home"));
 
-const App = ({ loggedInUser, getSessions, fetchingSession }) => {
+const App = ({ loggedInUser, getSessions }) => {
   useEffect(() => {
     getSessions();
   }, [getSessions]);
 
-  return fetchingSession ? (
-    <PageLoader message="Autenticando" />
-  ) : (
+  return (
     <div className="app-wrapper">
       <Router>
         {!loggedInUser && <Header />}
