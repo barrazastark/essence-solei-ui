@@ -1,0 +1,22 @@
+.floating-bar-wrapper {
+  width: 40px;
+
+  a {
+    margin-bottom: 10px;
+    display: block;
+    width: 40px;
+    img {
+      transition: all 0.4s;
+      width: 40px;
+
+      &:hover {
+        width: 45px;
+      }
+    }
+  }
+
+  a:last-of-type {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}

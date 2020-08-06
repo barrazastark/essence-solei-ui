@@ -1,0 +1,11 @@
+.app-wrapper {
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+
+  .floating-bar-wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+  }
+}
