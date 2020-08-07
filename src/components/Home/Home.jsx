@@ -11,6 +11,8 @@ import "./Home.scss";
 
 export const blockName = "home-wrapper";
 
+const stylesForPlaceHolder = { height: "100%" };
+
 const Home = ({ banner }) => (
   <PageWrapper className={blockName}>
     {banner ? (
@@ -30,7 +32,7 @@ const Home = ({ banner }) => (
         )}
       </>
     ) : (
-      <Placeholder.Graph active style={{ height: "100%" }} />
+      <Placeholder.Graph active style={stylesForPlaceHolder} />
     )}
   </PageWrapper>
 );
