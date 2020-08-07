@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { Button, Placeholder, Animation, Icon, Alert } from "rsuite";
-import { Box, TextField, Form } from "UIElements";
+import { TextField, Form } from "UIElements";
 import { useShow } from "utils";
 import "./Login.scss";
 import model from "./model";
@@ -22,7 +22,7 @@ const Login = ({ onLogin, loading, errorKey }) => {
 
   return (
     <div className={blockName}>
-      <Box className={`${blockName}__box`}>
+      <div className={`${blockName}__box`}>
         <Fade in={showContent} className={`${blockName}__faded-content`}>
           {(props) => (
             <div {...props}>
@@ -70,7 +70,7 @@ const Login = ({ onLogin, loading, errorKey }) => {
             </div>
           )}
         </Fade>
-      </Box>
+      </div>
     </div>
   );
 };

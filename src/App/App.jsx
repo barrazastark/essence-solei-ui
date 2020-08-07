@@ -13,9 +13,10 @@ import { getSessions } from "__redux__/actions";
 
 import "./App.scss";
 
-const Login = lazy(() => import("../containers/Login"));
+//const Login = lazy(() => import("../containers/Login"));
 const Main = lazy(() => import("../containers/Main"));
 const Home = lazy(() => import("../containers/Home"));
+const Catalago = lazy(() => import("../containers/Catalago"));
 
 const App = ({ loggedInUser, getSessions }) => {
   useEffect(() => {
@@ -29,8 +30,9 @@ const App = ({ loggedInUser, getSessions }) => {
         <Suspense fallback={<PageLoader message="Cargando" />}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <PrivateRoute path="/admin" component={Main} />
+            <Route path="/catalago" component={Catalago} />
+            {/*<Route path="/login" component={Login} />*/}
+            <PrivateRoute exact path="/admin" component={Main} />
             <Route path="*">
               <Redirect to="/" />
             </Route>
