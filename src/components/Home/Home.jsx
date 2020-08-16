@@ -5,7 +5,7 @@ import { Placeholder } from "rsuite";
 
 import { PageWrapper } from "UIElements";
 
-import { isDevMode } from "utils";
+import soleil from "images/soleil.png";
 
 import "./Home.scss";
 
@@ -17,19 +17,22 @@ const Home = ({ banner }) => (
   <PageWrapper className={blockName}>
     {banner ? (
       <>
-        {isDevMode ? (
-          <Link to="/catalago">
-            <img src={banner} alt="imagen" />
-          </Link>
-        ) : (
-          <a
-            href="https://cutt.ly/CATALOGO-PERFUMESAQUI"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={banner} alt="imagen" />
-          </a>
-        )}
+        <a
+          href="https://cutt.ly/CATALOGO-PERFUMESAQUI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${blockName}__home-image`}
+        >
+          <img src={banner} alt="imagen" />
+        </a>
+        <div className={`${blockName}__mobile-content`}>
+          <img src={soleil} alt="Soleil" />
+          <h1>
+            <span>permite que</span> <span>tu perfume</span>{" "}
+            <span>hable de ti</span>
+          </h1>
+          <Link to="/catalago">Ver catalago</Link>
+        </div>
       </>
     ) : (
       <Placeholder.Graph active style={stylesForPlaceHolder} />
