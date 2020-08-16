@@ -11,7 +11,7 @@ const FloatingBar = () => {
   return (
     <div className={blockName}>
       <a
-        href="https://wa.link/emmfji"
+        href="https://wa.me/6674760979"
         rel="noopener noreferrer"
         target="_blank"
       >
