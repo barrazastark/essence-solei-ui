@@ -18,7 +18,7 @@ const FloatingBar = () => {
         <img src={whatsapp} alt="Whatsapp" />
       </a>
       <a
-        href="https://msng.link/o/?essenceSoleilonline=fm"
+        href="https://m.me/essenceSoleilonline"
         rel="noopener noreferrer"
         target="_blank"
       >
